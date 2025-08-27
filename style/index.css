@@ -1,0 +1,41 @@
+body {
+    padding: 20px;
+}
+
+/* Content area style */
+#contentArea {
+    min-height: 300px;
+    /* ensures content box has some height even if empty */
+    white-space: pre-wrap;
+    /* preserve line breaks from txt file */
+    background: #f8f9fa;
+    border: 1px solid #dee2e6;
+    border-radius: .5rem;
+    padding: 1rem;
+}
+
+/* Sidebar animation */
+#sidebar {
+    transition: all 0.3s ease;
+}
+
+/* Content expands full width when sidebar is hidden */
+.full-width {
+    width: 100% !important;
+    flex: 0 0 100% !important;
+    max-width: 100% !important;
+}
+
+/* Formatting text content */
+pre {
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    /* wrap long words instead of overflowing */
+}
+
+/* Top bar design */
+#topbar {
+    background: #f8f9fa;
+    border-bottom: 1px solid #ddd;
+    padding: 10px;
+}
