@@ -1,0 +1,46 @@
+# For comment task when feedback
+
+-	주임님, 네 수정했습니다. 확인 부탁드립니다.								
+=>	주임님, Yes i have made it changes. Please check.
+	
+-	주임님, 새로고침 후 재시도 부탁드립니다.								
+=>	Sir, please refresh and try again.
+	
+-	네 확인했습니다.														
+=>	Yes i checked.
+	
+-	네, 알겠습니다.														
+=>	Yes, i understand.
+	
+-	테스트 했어요?														
+=>	Did you test it?
+	
+-	테스트 중입니다.														
+=>	I'm testing it now.
+	
+-	주임님, 네 확인하겠습니다.											
+=>	Yes, i will check it.
+	
+-	부장님, 완료했습니다. 확인 부탁드립니다.								
+=>	Manager, i have completed it. Please check it.
+	
+-	부장님,  완료했습니다. 확인 부탁드립니다.								
+=>	Sir, it's complete. Please check.
+	
+-	완료했습니다. 확인 부탁드립니다.										
+=>	I have completed it. Please check.
+	
+-	피드백 내용을 반영하였습니다.											
+=>	The feedback has been reflected.
+	
+-	주임님, 확인 감사합니다.												
+=>	주임님, thank you for checking.
+	
+-	수정했습니다, 확인부탁드립니다.										
+=>	I have made the changes. Please check.
+	
+-	수정했습니다. 올바른지 확인 부탁드립니다.								
+=>	I have made the changes. Please verify if they are correct.
+	
+-	확인 주셔서 감사합니다. 이건 마지막 수정입니다.							
+=>	Thank you for checking. this is the last modification.

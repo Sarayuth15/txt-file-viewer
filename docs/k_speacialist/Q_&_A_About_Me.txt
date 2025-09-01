@@ -8,7 +8,7 @@ A.	저는 25살입니다.
 A.	저는 캄보디아 프놈펜에서 자랐습니다.
 
 4.	가족이 몇 명이고, 누구인가요?
-A.	제 가족은 할머니, 아버지, 어머니, 누나 그리고 저를 포함해서 다섯명입니다. (There are five people in my family including my grandmother, father, mother, older sister and me.)
+A.	제 가족은 할머니, 아버지, 어머니, 누나 그리고 저를 포함해서 다섯명입니다.
 
 5.	AEU 대학교에서 전공이 무엇이었나요? (What did you major in at AEU University?)
 A.	저는 컴퓨터 공학을 전공했습니다.
@@ -50,7 +50,7 @@ A.	해운대 해수욕장, 부산타워, 남포동에 갔습니다. (I went to H
 A.	경복궁, 남산타워, 명동, 올림픽공원, 한강, 타임스퀘어, 롯데타워에 갔습니다.
 
 18.	주말에 주로 무엇을 하나요? (What do you usually do on weekends?)
-A.	커피숍에 가서 한국어를 공부하고, 최신 기술을 보러 일렉트로마켓에 갑니다. (I go to a coffee shop to study Korean, and then I go to the Electromart to see the latest technology)
+A.	커피숍에 가서 한국어를 공부하고, 최신 기술을 보러 일렉트로마켓에 갑니다.
 
 19.	취미가 무엇인가요? (What are your hobbies?)
 A.	코딩, 영화와 유튜브 시청, 음악 감상, 게임하기입니다. (Coding, watching movies and YouTube, listening to music, and playing games)
