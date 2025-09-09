@@ -44,3 +44,6 @@
 	
 -	확인 주셔서 감사합니다. 이건 마지막 수정입니다.							
 =>	Thank you for checking. this is the last modification.
+
+-   주임님 해당 내용 수정완료했습니다 확인 부탁드립니다.
+=>  Manager, I have completed the corrections for the content. Please check it.
