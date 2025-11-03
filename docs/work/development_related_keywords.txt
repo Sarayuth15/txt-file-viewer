@@ -1,0 +1,7 @@
+###	Development Related Keywords
+
+-	2025년 11월 이행계획서
+=>	November 2025 implementation plan
+	
+-	처리완료하였습니다.
+=>	Processing has been completed.
