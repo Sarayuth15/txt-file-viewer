@@ -1,22 +1,25 @@
 # For reflection
 
--	운영 반영완료했습니다. 확인 부탁드립니다.								
-=>	Operation reflection has been completed. Please check it.
+운영 반영완료했습니다. 확인 부탁드립니다.								
+Operation reflection has been completed. Please check it.
 	
--	피드백 내용을 반영하였습니다.											
-=>	The feedback has been reflected.
+피드백 내용을 반영하였습니다.											
+The feedback has been reflected.
 	
--	부장님, 관련 소스 운영반영요청했습니다. 확인 부탁드립니다.				
-=>	Boss, I've requested that the related source code be deployed. Please check it.
+부장님, 관련 소스 운영반영요청했습니다. 확인 부탁드립니다.				
+Boss, I've requested that the related source code be deployed. Please check it.
 	
--	부장님, 수정완료했습니다. 확인 부탁드립니다.							
-=>	Boss, I'm done with the revisions. Please check them.
+부장님, 수정완료했습니다. 확인 부탁드립니다.							
+Boss, I'm done with the revisions. Please check them.
 
--   운영 반영되었습니다.
-=>  The operation has been reflected.
+운영 반영되었습니다.
+The operation has been reflected.
 
--   부장님, 다시 내용을 수정했고, 운영반영했습니다. 확인 부탁드립니다.
-=>  Manager, I have revised the content and applied it to operations. Please check.
+부장님, 다시 내용을 수정했고, 운영반영했습니다. 확인 부탁드립니다.
+Manager, I have revised the content and applied it to operations. Please check.
 
--   해당 내용 운영적용 완료했습니다. 확인 부탁드립니다.
-=>  The changes have been applied to the operations environment. Please check.
+해당 내용 운영적용 완료했습니다. 확인 부탁드립니다.
+The changes have been applied to the operations environment. Please check.
+
+운영반영요청했습니다.
+I have requested the deployment to the production environment.
