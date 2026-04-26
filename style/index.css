@@ -1,41 +1,226 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+:root {
+    --bg-color: #f8fafc;
+    --sidebar-bg: #ffffff;
+    --text-main: #1e293b;
+    --text-muted: #64748b;
+    --accent: #4f46e5; /* Indigo */
+    --accent-hover: #4338ca;
+    --border-color: #e2e8f0;
+    --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+    --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+    --topbar-height: 64px;
+}
+
 body {
-    padding: 20px;
-}
-
-/* Content area style */
-#contentArea {
-    min-height: 300px;
-    /* ensures content box has some height even if empty */
-    white-space: pre-wrap;
-    /* preserve line breaks from txt file */
-    background: #f8f9fa;
-    border: 1px solid #dee2e6;
-    border-radius: .5rem;
-    padding: 1rem;
-}
-
-/* Sidebar animation */
-#sidebar {
-    transition: all 0.3s ease;
-}
-
-/* Content expands full width when sidebar is hidden */
-.full-width {
-    width: 100% !important;
-    flex: 0 0 100% !important;
-    max-width: 100% !important;
-}
-
-/* Formatting text content */
-pre {
-    white-space: pre-wrap;
-    word-wrap: break-word;
-    /* wrap long words instead of overflowing */
+    font-family: 'Inter', sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-main);
+    margin: 0;
+    overflow: hidden; /* Handle scrolling in inner containers */
 }
 
 /* Top bar design */
 #topbar {
-    background: #f8f9fa;
-    border-bottom: 1px solid #ddd;
-    padding: 10px;
+    height: var(--topbar-height);
+    background: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--border-color);
+    padding: 0 24px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    box-shadow: var(--shadow-sm);
+}
+
+#topbar h5 {
+    font-weight: 600;
+    margin: 0;
+    color: var(--text-main);
+    letter-spacing: -0.02em;
+    font-size: 1.15rem;
+}
+
+.btn-outline-primary {
+    color: var(--text-main);
+    border-color: var(--border-color);
+    background: white;
+    font-weight: 500;
+    transition: all 0.2s ease;
+    border-radius: 0.5rem;
+    padding: 0.4rem 0.6rem;
+}
+
+.btn-outline-primary:hover {
+    background: var(--bg-color);
+    color: var(--accent);
+    border-color: var(--border-color);
+}
+
+/* Main Layout Setup */
+.main-layout {
+    display: flex;
+    margin-top: var(--topbar-height);
+    height: calc(100vh - var(--topbar-height));
+}
+
+/* Sidebar Styling */
+#sidebar {
+    width: 320px;
+    flex-shrink: 0;
+    background: var(--sidebar-bg);
+    border-right: 1px solid var(--border-color);
+    overflow-y: auto;
+    transition: margin-left 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    padding: 1.5rem;
+    height: 100%;
+}
+
+#sidebar.hidden {
+    margin-left: -320px;
+}
+
+#sidebar h4 {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    font-weight: 700;
+    color: var(--text-muted);
+    margin-bottom: 1.25rem;
+    padding-left: 0.5rem;
+}
+
+/* Accordion Customization */
+.accordion {
+    --bs-accordion-border-width: 0;
+    --bs-accordion-bg: transparent;
+}
+
+.accordion-item {
+    margin-bottom: 0.5rem;
+}
+
+.accordion-button {
+    padding: 0.75rem 1rem;
+    font-weight: 500;
+    color: var(--text-main);
+    background: var(--sidebar-bg);
+    border-radius: 0.5rem !important;
+    box-shadow: none !important;
+    transition: background 0.2s;
+    font-size: 0.95rem;
+}
+
+.accordion-button:not(.collapsed) {
+    color: var(--accent);
+    background: var(--bg-color);
+}
+
+.accordion-button:hover {
+    background: var(--bg-color);
+}
+
+/* File Links */
+.list-group-item.file-link {
+    border: none;
+    background: transparent;
+    padding: 0.5rem 1rem 0.5rem 2.5rem;
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    cursor: pointer;
+    border-radius: 0.5rem;
+    margin-bottom: 2px;
+    transition: all 0.2s ease;
+    position: relative;
+}
+
+.list-group-item.file-link::before {
+    content: "📄";
+    position: absolute;
+    left: 0.8rem;
+    font-size: 0.8rem;
+    opacity: 0.5;
+    transition: opacity 0.2s;
+}
+
+.list-group-item.file-link:hover {
+    background: var(--bg-color);
+    color: var(--text-main);
+    transform: translateX(4px);
+}
+
+.list-group-item.file-link:hover::before {
+    opacity: 1;
+}
+
+.list-group-item.file-link.active {
+    background: var(--accent);
+    color: white;
+    font-weight: 500;
+}
+
+.list-group-item.file-link.active::before {
+    content: "📝";
+    opacity: 1;
+}
+
+/* Content Area Styling */
+#contentWrapper {
+    flex-grow: 1;
+    overflow-y: auto;
+    padding: 2.5rem 4rem;
+    transition: all 0.3s ease;
+    background: var(--bg-color);
+}
+
+#contentWrapper h4 {
+    font-weight: 600;
+    margin-bottom: 2rem;
+    color: var(--text-main);
+    font-size: 1.25rem;
+}
+
+#contentArea {
+    background: white;
+    border: 1px solid var(--border-color);
+    border-radius: 1rem;
+    padding: 2.5rem;
+    box-shadow: var(--shadow-sm);
+    min-height: calc(100vh - var(--topbar-height) - 10rem);
+    font-size: 1rem;
+    line-height: 1.7;
+    color: #334155;
+    transition: box-shadow 0.3s ease;
+}
+
+#contentArea:hover {
+    box-shadow: var(--shadow-md);
+}
+
+#contentArea pre {
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+::-webkit-scrollbar-track {
+    background: transparent;
+}
+::-webkit-scrollbar-thumb {
+    background: #cbd5e1;
+    border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: #94a3b8;
 }

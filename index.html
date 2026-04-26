@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Documentation</title>
+    <title>My File Viewer</title>
     <link rel="icon" type="image/png" href="img/icon.png">
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -15,145 +15,150 @@
 
 <body>
 
-    <!-- Topbar with hamburger button -->
-    <div id="topbar" class="d-flex align-items-center">
+    <!-- Topbar -->
+    <div id="topbar">
         <!-- Hamburger toggle button -->
-        <button class="btn btn-outline-primary me-2" id="toggleSidebar">☰ Menu</button>
+        <button class="btn btn-outline-primary me-3" id="toggleSidebar">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-list mb-1" viewBox="0 0 16 16">
+                <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"/>
+            </svg>
+        </button>
         <!-- Page title -->
-        <h5 class="mb-0">My File Viewer</h5>
+        <h5>My File Viewer</h5>
     </div>
 
-    <!-- Bootstrap fluid container (full-width layout) -->
-    <div class="container-fluid">
-        <div class="row">
-            
-            <!-- Sidebar section (left side) -->
-            <div class="col-md-4" id="sidebar">
-                <h4 class="mb-3 mt-3">Categories</h4>
+    <!-- Main Layout -->
+    <div class="main-layout">
+        
+        <!-- Sidebar section -->
+        <div id="sidebar">
+            <h4>Categories</h4>
 
-                <!-- Accordion for categories -->
-                <div class="accordion" id="categoryAccordion">
+            <!-- Accordion for categories -->
+            <div class="accordion" id="categoryAccordion">
 
-                    <!-- Category: Question and Answer -->
-                    <div class="accordion-item">
-                        <h2 class="accordion-header" id="headingDoc">
-                            <!-- Accordion toggle button -->
-                            <button class="accordion-button" type="button" data-bs-toggle="collapse"
-                                data-bs-target="#collapseDoc" aria-expanded="true" aria-controls="collapseDoc">
-                                📂 K-Speacialist
-                            </button>
-                        </h2>
-                        <!-- Accordion content -->
-                        <div id="collapseDoc" class="accordion-collapse collapse show" aria-labelledby="headingDoc"
-                            data-bs-parent="#categoryAccordion">
-                            <div class="accordion-body p-0">
-                                <!-- List of files under this category -->
-                                <ul class="list-group list-group-flush">
-                                    <li class="list-group-item file-link" data-file="docs/k_speacialist/Q_&_A_About_Me.txt">Q & A About Me</li>
-                                    <li class="list-group-item file-link" data-file="docs/k_speacialist/한국생활.txt">한국생활</li>
-                                </ul>
-                            </div>
+                <!-- Category: K-Speacialist -->
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingDoc">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapseDoc" aria-expanded="true" aria-controls="collapseDoc">
+                            <span class="me-2">📂</span> K-Speacialist
+                        </button>
+                    </h2>
+                    <div id="collapseDoc" class="accordion-collapse collapse show" aria-labelledby="headingDoc"
+                        data-bs-parent="#categoryAccordion">
+                        <div class="accordion-body p-0">
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item file-link" data-file="docs/k_speacialist/Q_&_A_About_Me.txt">Q & A About Me</li>
+                                <li class="list-group-item file-link" data-file="docs/k_speacialist/한국생활.txt">한국생활</li>
+                            </ul>
                         </div>
                     </div>
-
-                    <!-- Category: Notes -->
-                    <div class="accordion-item">
-                        <h2 class="accordion-header" id="headingNote">
-                            <!-- Accordion toggle button -->
-                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                data-bs-target="#collapseNotes" aria-expanded="false" aria-controls="collapseNotes">
-                                📝 Daily Sentence
-                            </button>
-                        </h2>
-                        <!-- Accordion content -->
-                        <div id="collapseNotes" class="accordion-collapse collapse" aria-labelledby="headingNote"
-                            data-bs-parent="#categoryAccordion">
-                            <div class="accordion-body p-0">
-                                <!-- List of note files -->
-                                <ul class="list-group list-group-flush">
-                                    <li class="list-group-item file-link" data-file="docs/daily_sentece/daily.txt">일기</li>
-                                    <li class="list-group-item file-link" data-file="docs/daily_sentece/work.txt">Work log</li>
-                                    <li class="list-group-item file-link" data-file="docs/daily_sentece/monday.txt">Monday</li>
-                                    <li class="list-group-item file-link" data-file="docs/daily_sentece/tuesday.txt">Tuesday</li>
-                                    <li class="list-group-item file-link" data-file="docs/daily_sentece/wednesday.txt">Wednesday</li>
-                                    <li class="list-group-item file-link" data-file="docs/daily_sentece/friday.txt">Friday</li>
-                                    <li class="list-group-item file-link" data-file="docs/daily_sentece/saturday.txt">Saturday</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Category: Work -->
-                    <div class="accordion-item">
-                        <h2 class="accordion-header">
-                            <!-- Accordion toggle button -->
-                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseWork" aria-expanded="false" aria-controls="collapseWork">💼 Work</button>
-                        </h2>
-                        <!-- Accordion content -->
-                        <div id="collapseWork" class="accordion-collapse collapse" aria-labelledby="headingNote" data-bs-parent="#categoryAccordion">
-                            <div class="accordion-body p-0">
-                                <!-- List of note files -->
-                                <ul class="list-group list-group-flush">
-                                    <li class="list-group-item file-link" data-file="docs/work/for_comment_task_when_feedback.txt">For Comment Task When Feedback</li>
-                                    <li class="list-group-item file-link" data-file="docs/work/daily_words_for_work_conversation.txt">Daily Words For Work Conversation</li>
-                                    <li class="list-group-item file-link" data-file="docs/work/for_reflection.txt">For Reflection</li>
-                                    <li class="list-group-item file-link" data-file="docs/work/development_related_keywords.txt">Development Related Keywords</li>
-                                    <li class="list-group-item file-link" data-file="docs/work/Sample_Post_Issue_Details.txt">Sample Post Issue Details</li>                                    
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Category Phrases for beginners -->
-                     <div class="accordion-item">
-                        <h2 class="accordion-header">
-                            <!-- Accordion toggle button -->
-                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapsePhrases" aria-expanded="false" aria-controls="collapsePhrases">📒 Phrases For Beginners</button>
-                        </h2>
-                        <!-- Accordion content -->
-                        <div id="collapsePhrases" class="accordion-collapse collapse" aria-labelledby="headingNote" data-bs-parent="#categoryAccordion">
-                            <div class="accordion-body p-0">
-                                <!-- List of note files -->
-                                <ul class="list-group list-group-flush">
-                                    <li class="list-group-item file-link" data-file="docs/Phrases_For_Beginners/Phrases_For_Beginners.txt">Phrases For Beginners</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Category Grammar -->
-                    <div class="accordion-item">
-                        <h2 class="accordion-header">
-                            <!-- Accordion toggle button -->
-                             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseGrammar" aria-expanded="false" aria-controls="collapseGrammar">✏️ Grammar</button>
-                        </h2>
-                        <!-- Accordion content -->
-                        <div id="collapseGrammar" class="accordion-collapse collapse" aria-labelledby="headingNote" data-bs-parent="#categoryAccordion">
-                            <div class="accordion-body p-0">
-                                <!-- List of note files -->
-                                <ul class="list-group list-group-flush">
-                                    <li class="list-group-item file-link" data-file="docs/grammar/grammar_1.txt">ទម្រង់ 하고 [នឹង,ជាមួយនឹង]</li>
-                                    <li class="list-group-item file-link" data-file="docs/grammar/grammar_2.txt">គុណកិរិយាសំខាន់ៗក្នុងភាសាកូរ៉េ</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    
-
                 </div>
-            </div>
 
-            <!-- Content area (right side) -->
-            <div class="col-md-8" id="contentWrapper">
-                <h4 class="mb-3 mt-3">File Content</h4>
-                <!-- Placeholder where file content will be displayed -->
-                <div id="contentArea">Select a file from the left to view its content...</div>
+                <!-- Category: Daily Sentence -->
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingNote">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapseNotes" aria-expanded="false" aria-controls="collapseNotes">
+                            <span class="me-2">📝</span> Daily Sentence
+                        </button>
+                    </h2>
+                    <div id="collapseNotes" class="accordion-collapse collapse" aria-labelledby="headingNote"
+                        data-bs-parent="#categoryAccordion">
+                        <div class="accordion-body p-0">
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item file-link" data-file="docs/daily_sentece/daily.txt">일기</li>
+                                <li class="list-group-item file-link" data-file="docs/daily_sentece/work.txt">Work log</li>
+                                <li class="list-group-item file-link" data-file="docs/daily_sentece/monday.txt">Monday</li>
+                                <li class="list-group-item file-link" data-file="docs/daily_sentece/tuesday.txt">Tuesday</li>
+                                <li class="list-group-item file-link" data-file="docs/daily_sentece/wednesday.txt">Wednesday</li>
+                                <li class="list-group-item file-link" data-file="docs/daily_sentece/friday.txt">Friday</li>
+                                <li class="list-group-item file-link" data-file="docs/daily_sentece/saturday.txt">Saturday</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Category: Work -->
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseWork" aria-expanded="false" aria-controls="collapseWork">
+                            <span class="me-2">💼</span> Work
+                        </button>
+                    </h2>
+                    <div id="collapseWork" class="accordion-collapse collapse" aria-labelledby="headingNote" data-bs-parent="#categoryAccordion">
+                        <div class="accordion-body p-0">
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item file-link" data-file="docs/work/for_comment_task_when_feedback.txt">For Comment Task When Feedback</li>
+                                <li class="list-group-item file-link" data-file="docs/work/daily_words_for_work_conversation.txt">Daily Words For Work Conversation</li>
+                                <li class="list-group-item file-link" data-file="docs/work/for_reflection.txt">For Reflection</li>
+                                <li class="list-group-item file-link" data-file="docs/work/development_related_keywords.txt">Development Related Keywords</li>
+                                <li class="list-group-item file-link" data-file="docs/work/Sample_Post_Issue_Details.txt">Sample Post Issue Details</li>                                    
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Category Phrases for beginners -->
+                 <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapsePhrases" aria-expanded="false" aria-controls="collapsePhrases">
+                            <span class="me-2">📒</span> Phrases For Beginners
+                        </button>
+                    </h2>
+                    <div id="collapsePhrases" class="accordion-collapse collapse" aria-labelledby="headingNote" data-bs-parent="#categoryAccordion">
+                        <div class="accordion-body p-0">
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item file-link" data-file="docs/Phrases_For_Beginners/Phrases_For_Beginners.txt">Phrases For Beginners</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Category Grammar -->
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                         <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseGrammar" aria-expanded="false" aria-controls="collapseGrammar">
+                            <span class="me-2">✏️</span> Grammar
+                        </button>
+                    </h2>
+                    <div id="collapseGrammar" class="accordion-collapse collapse" aria-labelledby="headingNote" data-bs-parent="#categoryAccordion">
+                        <div class="accordion-body p-0">
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item file-link" data-file="docs/grammar/grammar_1.txt">ទម្រង់ 하고 [នឹង,ជាមួយនឹង]</li>
+                                <li class="list-group-item file-link" data-file="docs/grammar/grammar_2.txt">គុណកិរិយាសំខាន់ៗក្នុងភាសាកូរ៉េ</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Content area -->
+        <div id="contentWrapper">
+            <!-- Title will be dynamically updated by JS if we want, or static -->
+            <h4 id="contentTitle" class="d-flex align-items-center">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-file-earmark-text me-2 text-primary" viewBox="0 0 16 16">
+                  <path d="M5.5 7a.5.5 0 0 0 0 1h5a.5.5 0 0 0 0-1h-5zM5 9.5a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5zm0 2a.5.5 0 0 1 .5-.5h2a.5.5 0 0 1 0 1h-2a.5.5 0 0 1-.5-.5z"/>
+                  <path d="M9.5 0H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V4.5L9.5 0zm0 1v2.5a1 1 0 0 0 1 1H13v9a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h5.5z"/>
+                </svg>
+                <span class="text">File Content</span>
+            </h4>
+            
+            <div id="contentArea">
+                <div class="text-center text-muted mt-5">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" fill="currentColor" class="bi bi-folder2-open mb-3" viewBox="0 0 16 16" style="opacity: 0.5;">
+                        <path d="M1 3.5A1.5 1.5 0 0 1 2.5 2h2.764c.958 0 1.76.56 2.311 1.184C7.985 3.648 8.48 4 9 4h4.5A1.5 1.5 0 0 1 15 5.5v.64c.57.265.94.876.856 1.546l-.64 5.124A2.5 2.5 0 0 1 12.733 15H3.266a2.5 2.5 0 0 1-2.481-2.19l-.64-5.124A1.5 1.5 0 0 1 1 6.14V3.5zM2 6h12v-.5a.5.5 0 0 0-.5-.5H9c-.964 0-1.71-.629-2.174-1.154C6.374 3.334 5.82 3 5.264 3H2.5a.5.5 0 0 0-.5.5V6zm-.367 1a.5.5 0 0 0-.496.562l.64 5.124A1.5 1.5 0 0 0 3.266 14h9.468a1.5 1.5 0 0 0 1.489-1.314l.64-5.124A.5.5 0 0 0 14.367 7H1.633z"/>
+                    </svg>
+                    <p>Select a file from the sidebar to view its content...</p>
+                </div>
             </div>
         </div>
     </div>
 
-    <!-- Bootstrap JS (accordion, collapse, etc.) -->
+    <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
     <script src="script/index.js"></script>
 </body>
