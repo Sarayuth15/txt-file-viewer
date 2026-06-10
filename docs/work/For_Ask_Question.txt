@@ -1,0 +1,5 @@
+# For Ask Question
+
+혹시 해당 서버는 캄보디아에서 접속이 안 됩니다. 그럼 우리 담당자이십니까?
+It seems that the server cannot be accessed from Cambodia. In that case, are you the person in charge?
+មើលទៅ Server នេះមិនអាចចូលប្រើពីប្រទេសកម្ពុជាបានទេ។ ដូច្នេះ តើលោក/អ្នកជាអ្នកទទួលខុសត្រូវលើបញ្ហានេះមែនទេ?
